@@ -1,0 +1,29 @@
+header {
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #ffffff;
+    border: 5px solid red;
+    height: 72px;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.171);
+    padding: 20px;
+}
+img {
+    width: 100%;
+    height: 64px;
+}
+/* task: icon abstand geben  */
+.header-title {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #ff8000;
+}
+body {
+    background-color: #f5f3f1;
+    color: #242e30;
+}

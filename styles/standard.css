@@ -1,0 +1,12 @@
+/* globale standart css eigenschaften */
+* {
+    font-family: "JetBrains Mono", monospace;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
