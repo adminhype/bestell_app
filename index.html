@@ -13,15 +13,17 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="./styles/assets.css" />
         <link rel="stylesheet" href="./styles/basket.css" />
+        <link rel="stylesheet" href="./styles/menu.css" />
         <link rel="stylesheet" href="./styles/standard.css" />
 
         <title>Bestellen</title>
     </head>
-    <body>
+    <body onload="init()">
         <header>
             <div class="header-container">
                 <div>
                     <img
+                        class="header-logo"
                         src="/assets/img/icons/Favicon/android-chrome-192x192.png"
                         alt=""
                     />
@@ -29,8 +31,15 @@
                 <div class="header-title">Lieferando</div>
             </div>
         </header>
+        <div class="page-content">
+            <div id="main-content">
+                <section id="hero-section"></section>
+                <section id="dish-section"></section>
+            </div>
 
-        <section id="main-content"></section>
+            <aside id="cart-section"></aside>
+            <div id="order-success"></div>
+        </div>
 
         <footer></footer>
         <script src="./scripts/db.js"></script>

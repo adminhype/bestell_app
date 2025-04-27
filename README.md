@@ -1,8 +1,9 @@
-alsooooooooooooo
+was brauche ich ?
 
-github reposetorie erstellt
-struktur aufgebaut
-farben schriftart ausgwählt
+gerichte hinzufügen section
+warenkorb
+-gerichte hinzufügen aus sections mit anzahl der gerichte + preis - icon, + icon, lösch icon
+reponsiv
+warenkorb als overlay einfügen
 
-lieferando.de/speisekarte
-anschauen
+switch einbauen ins warenkorb abholen / liefern preise müssen auch angepasst werden (lieferpauschale)

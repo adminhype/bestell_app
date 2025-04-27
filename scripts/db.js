@@ -1,82 +1,82 @@
 const myDishes = [
     {
-        "id": "turkey-breast",
-        "name": "Turkey Breast",
-        "price": 5.99,
-        "description": "Zarte Putenbrust auf Vollkornbaguette mit Salat, Tomate und Gurke",
+        "id": "beef-texicana-sub",
+        "name": "Beef Texicana Sub",
+        "price": 11.00,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/turkey-breast.jpg"
+        "src": "assets/img/Beef Texicana Sub.png"
     },
     {
-        "id": "veggie-delite",
-        "name": "Veggie Delite",
-        "price": 4.49,
-        "description": "Buntes Gemüse auf knackigem Baguette mit leichter Vinaigrette",
+        "id": "fiesta-fajita-sub",
+        "name": "Fiesta Fajita Sub",
+        "price": 9.60,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/veggie-delite.jpg"
+        "src": "assets/img/Fiesta Fajita Sub.png"
     },
     {
-        "id": "italian-bmt",
-        "name": "Italian B.M.T.",
-        "price": 6.49,
-        "description": "Schinken, Salami und Pepperoni mit Eisbergsalat und Zwiebeln",
+        "id": "furious-chicken-sub",
+        "name": "Furious Chicken Sub",
+        "price": 9.80,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/italian-bmt.jpg"
+        "src": "assets/img/Furious Chicken Sub.png"
     },
     {
-        "id": "tuna",
-        "name": "Tuna",
-        "price": 5.49,
-        "description": "Thunfischcreme mit Sellerie und Frühlingszwiebeln auf Weizenbaguette",
+        "id": "great-caesar-sub",
+        "name": "Great Caesar Sub",
+        "price": 9.60,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/tuna.jpg"
+        "src": "assets/img/Great Caesar Sub.png"
     },
     {
-        "id": "steak-and-cheese",
-        "name": "Steak & Cheese",
-        "price": 7.99,
-        "description": "Saftiges Rindfleisch mit geschmolzenem Käse und Paprika",
+        "id": "legendary-teriyaki-sub",
+        "name": "Legendary Teriyaki Sub",
+        "price": 9.60,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/steak-and-cheese.jpg"
+        "src": "assets/img/Legendary Teriyaki Sub.png"
     },
     {
-        "id": "meatball-marinara",
-        "name": "Meatball Marinara",
-        "price": 6.49,
-        "description": "Würzige Fleischbällchen in Tomatensauce mit Parmesan",
+        "id": "plant-based-legendary-teriyaki-sub",
+        "name": "Plant-based Legendary Teriyaki Sub",
+        "price": 10.40,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/meatball-marinara.jpg"
+        "src": "assets/img/Plant-based Legendary Teriyaki Sub.png"
     },
     {
-        "id": "subway-club",
-        "name": "Subway Club",
-        "price": 7.49,
-        "description": "Putenbrust, Roastbeef und Schinken mit knackigem Gemüse",
+        "id": "rotisserie-style-chicken-sub",
+        "name": "Rotisserie-Style Chicken Sub",
+        "price": 9.80,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/subway-club.jpg"
+        "src": "assets/img/Rotisserie-Style Chicken Sub.png"
     },
     {
-        "id": "chicken-teriyaki",
-        "name": "Chicken Teriyaki",
-        "price": 7.99,
-        "description": "Zartes Hähnchenfilet in Teriyaki-Marinade mit Frühlingszwiebeln",
+        "id": "taco-beef-fiesta-sub",
+        "name": "Taco Beef Fiesta Sub",
+        "price": 10.00,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/chicken-teriyaki.jpg"
+        "src": "assets/img/Taco Beef Fiesta Sub.png"
     },
     {
-        "id": "spicy-italian",
-        "name": "Spicy Italian",
-        "price": 6.99,
-        "description": "Feurige Pepperoni und Salami mit Jalapeños und scharfer Sauce",
+        "id": "tasty-tandoori-sub",
+        "name": "Tasty Tandoori Sub",
+        "price": 9.90,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/spicy-italian.jpg"
+        "src": "assets/img/Tasty Tandoori Sub.png"
     },
     {
-        "id": "black-forest-ham",
-        "name": "Black Forest Ham",
-        "price": 5.99,
-        "description": "Deftiger Schwarzwälder Schinken mit Gouda und Senfcreme",
+        "id": "the-bbq-master-sub",
+        "name": "The BBQ Master Sub",
+        "price": 10.10,
+        "description": "",
         "amount": 0,
-        "src": "https://beispiel.app/images/black-forest-ham.jpg"
+        "src": "assets/img/The BBQ Master Sub.png"
     }
 ]
