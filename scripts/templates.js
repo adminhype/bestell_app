@@ -16,9 +16,10 @@ function dishTemplate(dish) {
 }
 function renderCartHeaderContent() {
     return `
-        <h2>Warenkorb</h2>
-        <div class="switch-container">
-            <button onclick="selectMode('delivery')">Lieferung</button>
+        <h2 class="cartBasket">Warenkorb</h2>
+        <div class="switchContainer">
+            <button onclick="selectMode('delivery')">
+            <img>Lieferung</button>
             <button onclick="selectMode('pickup')">Abholung</button>
             </div>
         <div id="empty-cart" class="empty-cart">

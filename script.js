@@ -29,7 +29,7 @@ function selectMode(mode) {
 }
 function renderCart() {
     const basket = document.getElementById('cart-section');
-    basket.innerHTML = "<h2>Warenkorb</h2>";
+    basket.innerHTML = `<h2 class="cartBasket">Warenkorb</h2>`;
     const subtotal = calculateSubtotal();
     let total = calculateTotal(subtotal);
     for (let i = 0; i < myDishes.length; i++) {
