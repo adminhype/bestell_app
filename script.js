@@ -1,11 +1,12 @@
 const deliveryFee = 2.00;
 const serviceFee = 0.99;
+let currentMode = 'delivery';
 
 function init() {
     createHeroSection();
     renderDishes();
+    renderDefaultCart();
 }
-
 function createHeroSection() {
     const heroImg = document.getElementById('hero-section');
     heroImg.innerHTML = `<div class="restaurant-header-img"><img src="./assets/img/baguette-background.png" alt="" /></div>
@@ -19,14 +20,18 @@ function renderDishes() {
         dishSection.innerHTML += dishTemplate(dish);
     }
 }
+function renderDefaultCart() {
+    document.getElementById('cart-section').innerHTML = renderCartHeaderContent();
+}
+function selectMode(mode) {
+    currentMode = mode;
+    renderCart();
+}
 function renderCart() {
     const basket = document.getElementById('cart-section');
     basket.innerHTML = "<h2>Warenkorb</h2>";
     const subtotal = calculateSubtotal();
-    let total = 0;
-    if (subtotal > 0) {
-        total = subtotal + deliveryFee + serviceFee;
-    }
+    let total = calculateTotal(subtotal);
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
         if (dish.amount > 0) {
@@ -36,6 +41,7 @@ function renderCart() {
     basket.innerHTML += renderCartTotal(subtotal, deliveryFee, serviceFee, total);
     basket.innerHTML += `<button onclick="placeOrder()">Bezahlen</button>`;
 }
+
 function addToCart(id) {
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
@@ -43,6 +49,13 @@ function addToCart(id) {
             dish.amount += 1;
             renderCart();
         }
+    }
+}
+function calculateTotal(subtotal) {
+    if (currentMode === 'delivery') {
+        return subtotal + deliveryFee + serviceFee;
+    } else if (currentMode === 'pickup') {
+        return subtotal;
     }
 }
 function calculateSubtotal() {

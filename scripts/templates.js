@@ -18,14 +18,13 @@ function renderCartHeaderContent() {
     return `
         <h2>Warenkorb</h2>
         <div class="switch-container">
-            <button onclick="selectDelivery()">Lieferung</button>
-            <button onclick="selectPickup()">Abholung</button>
+            <button onclick="selectMode('delivery')">Lieferung</button>
+            <button onclick="selectMode('pickup')">Abholung</button>
             </div>
         <div id="empty-cart" class="empty-cart">
             <img src="./assets/img/icons/basket-icon.svg" alt="Basket Icon">
             <p>Fülle deinen Warenkorb</p>
             </div>
-
     `;
 }
 function renderCartDishes(dish) {
