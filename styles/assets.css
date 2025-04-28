@@ -6,6 +6,12 @@ button {
     transition: all 0.3s ease;
     padding: 10px 20px;
     gap: 10px;
+    padding: 8px 16px;
+
+    @media (max-width: 480px) {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
 }
 
 button:hover {

@@ -35,11 +35,9 @@ body {
     object-fit: cover;
 
     @media (max-width: 780px) {
-        border-radius: 20px;
     }
 
     @media (max-width: 480px) {
-        width: auto;
         height: 100px;
     }
 }
@@ -50,6 +48,12 @@ body {
     left: 50px;
     background-color: #f5f3f1;
     border-radius: 10px;
+    @media (max-width: 480px) {
+        img {
+            height: 64px;
+            width: 64px;
+        }
+    }
 }
 
 .description-section {
@@ -74,8 +78,8 @@ body {
     .description-button {
         button {
             display: flex;
-            align-items: center;
             gap: 5px;
+            align-items: end;
         }
     }
 }
