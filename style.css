@@ -7,12 +7,13 @@
     box-shadow: 0px 2px 8px 0px rgba(24, 23, 23, 0);
     padding: 20px;
 }
+
 .header-logo {
     height: 48px;
     width: auto;
     object-fit: contain;
 }
-/* task: icon abstand geben  */
+
 .header-title {
     display: flex;
     font-size: 14px;
@@ -21,22 +22,28 @@
     margin-left: 10px;
     color: #ff8000;
 }
+
 body {
     background-color: #f5f3f1;
     color: #242e30;
 }
-/* responsiv hero img verbessern  */
+
 .restaurant-header-img img {
     width: 100%;
-    height: 40vh;
-    aspect-ratio: 1 / 1;
+    height: auto;
+    aspect-ratio: auto;
     object-fit: cover;
 
     @media (max-width: 780px) {
         border-radius: 20px;
-        padding: 20px;
+    }
+
+    @media (max-width: 480px) {
+        width: auto;
+        height: 100px;
     }
 }
+
 .restaurant-header-icon {
     position: absolute;
     bottom: 20px;
@@ -44,14 +51,18 @@ body {
     background-color: #f5f3f1;
     border-radius: 10px;
 }
+
 .description-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
     .description-info {
         display: flex;
-        gap: 20px;
+        gap: 10px;
 
         span {
             display: flex;
@@ -68,13 +79,13 @@ body {
         }
     }
 }
-
 #impressum-container {
     margin: 64px 0px 64px 20px;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
+
 .footer-container {
     height: 112px;
     display: flex;
@@ -82,17 +93,21 @@ body {
     align-items: center;
     gap: 20px;
 }
+
 a {
     color: #242e30;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 .copy-right {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
+
 .overlay {
     position: fixed;
     top: 0;

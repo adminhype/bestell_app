@@ -7,10 +7,12 @@ function init() {
     renderDishes();
     renderDefaultCart();
 }
+
 function createHeroSection() {
     const heroImg = document.getElementById('hero-section');
     heroImg.innerHTML = renderHeroSection();
 }
+
 function renderDishes() {
     const dishSection = document.getElementById('dish-section');
     for (let i = 0; i < myDishes.length; i++) {
@@ -18,27 +20,33 @@ function renderDishes() {
         dishSection.innerHTML += dishTemplate(dish);
     }
 }
+
 function renderDefaultCart() {
     document.getElementById('cart-section').innerHTML = renderCartHeaderContent();
 }
+
 function selectMode(mode) {
     currentMode = mode;
     renderCart();
 }
+
 function renderCart() {
     const basket = document.getElementById('cart-section');
-    basket.innerHTML = `<h2 class="cartBasket">Warenkorb</h2>`;
+    basket.innerHTML = renderCartTitle();
     const subtotal = calculateSubtotal();
     let total = calculateTotal(subtotal);
+
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
         if (dish.amount > 0) {
             basket.innerHTML += renderCartDishes(dish);
         }
     }
+
     basket.innerHTML += renderCartTotal(subtotal, deliveryFee, serviceFee, total);
-    basket.innerHTML += `<button onclick="placeOrder()">Bezahlen</button>`;
+    basket.innerHTML += renderCheckoutButton();
 }
+
 
 function addToCart(id) {
     for (let i = 0; i < myDishes.length; i++) {
@@ -49,6 +57,7 @@ function addToCart(id) {
         }
     }
 }
+
 function calculateTotal(subtotal) {
     if (currentMode === 'delivery') {
         return subtotal + deliveryFee + serviceFee;
@@ -56,6 +65,7 @@ function calculateTotal(subtotal) {
         return subtotal;
     }
 }
+
 function calculateSubtotal() {
     let subtotal = 0;
     for (let i = 0; i < myDishes.length; i++) {
@@ -66,6 +76,7 @@ function calculateSubtotal() {
     }
     return subtotal;
 }
+
 function placeOrder() {
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
@@ -74,6 +85,7 @@ function placeOrder() {
     renderCart();
     openOrderSuccessOverlay();
 }
+
 function updateCartAmount(id, action) {
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
@@ -90,7 +102,7 @@ function updateCartAmount(id, action) {
         }
     }
 }
-// reponsiv warenkorb
+
 function renderOverlayCart() {
     const overlayCart = document.getElementById('overlay-cart-content');
     overlayCart.innerHTML = "";
@@ -103,10 +115,12 @@ function renderOverlayCart() {
         }
     }
 }
+
 function openBasketOverlay() {
     document.getElementById('cart-overlay').classList.remove('d-none');
     renderOverlayCart();
 }
+
 function cloveBasketOverlay() {
     document.getElementById('cart-overlay').classList.add('d-none');
 }
@@ -116,6 +130,7 @@ function openOrderSuccessOverlay() {
     overlay.classList.remove('d-none');
     overlay.innerHTML = renderOrderSuccessOverlay();
 }
+
 function closeOrderSuccessOverlay() {
     document.getElementById('order-success-overlay').classList.add('d-none');
 }

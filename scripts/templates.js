@@ -27,6 +27,7 @@ function dishTemplate(dish) {
             </div> 
     </div>`
 }
+
 function renderCartHeaderContent() {
     return `
         <h2 class="cartBasket">Warenkorb</h2>
@@ -48,6 +49,14 @@ function renderCartHeaderContent() {
             </div>
     `;
 }
+function renderCartTitle() {
+    return `<h2 class="cartBasket">Warenkorb</h2>`;
+}
+
+function renderCheckoutButton() {
+    return `<button onclick="placeOrder()">Bezahlen</button>`;
+}
+
 function renderCartDishes(dish) {
     return `
     <div class="cartItem">
@@ -79,6 +88,7 @@ function renderCartTotal(subtotal, deliveryFee, serviceFee, total) {
     </div>
 `;
 }
+
 function renderOrderSuccessOverlay() {
     return `
     <div class="order-success-overlay-content">
