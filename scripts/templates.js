@@ -51,10 +51,10 @@ function renderCartHeaderContent() {
 function renderCartDishes(dish) {
     return `
     <div class="cartItem">
-    <p>${dish.name}</p>       
+    <p>Der Klassisch: ${dish.name}</p>       
     <p>${(dish.price * dish.amount).toFixed(2)} €
 </p >       
-    <p>${dish.amount}</p>       
+    <p>Anzahl: ${dish.amount}</p>       
     <button onclick="updateCartAmount('${dish.id}', 'increase')">
                 <img src="./assets/img/icons/+Icon.svg" alt="erhöhen">
                 </button>
@@ -79,3 +79,12 @@ function renderCartTotal(subtotal, deliveryFee, serviceFee, total) {
     </div>
 `;
 }
+function renderOrderSuccessOverlay() {
+    return `
+    <div class="order-success-overlay-content">
+        <h2>🎉 Deine Testbestellung war erfolgreich!</h2>
+        <button onclick="closeOrderSuccessOverlay()">Schließen</button>
+    </div>
+    `;
+}
+

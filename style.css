@@ -34,8 +34,7 @@ body {
 
     @media (max-width: 780px) {
         border-radius: 20px;
-        border: solid 2px red;
-        padding: 40px;
+        padding: 20px;
     }
 }
 .restaurant-header-icon {
@@ -45,6 +44,31 @@ body {
     background-color: #f5f3f1;
     border-radius: 10px;
 }
+.description-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .description-info {
+        display: flex;
+        gap: 20px;
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    .description-button {
+        button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
 #impressum-container {
     margin: 64px 0px 64px 20px;
     display: flex;
@@ -68,4 +92,29 @@ a:hover {
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* halbtransparent schwarz */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.d-none {
+    display: none;
 }

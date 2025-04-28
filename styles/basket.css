@@ -15,6 +15,10 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
+
+    @media (max-width: 780px) {
+        display: none;
+    }
 }
 .cartBasket {
     font-weight: 900;
@@ -86,4 +90,28 @@ button:hover {
         width: 60px;
         height: 60px;
     }
+}
+.order-success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.order-success-overlay-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.d-none {
+    display: none;
 }

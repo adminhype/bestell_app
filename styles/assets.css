@@ -10,3 +10,44 @@ button {
 button:hover {
     background-color: rgba(0, 0, 0, 0.007);
 }
+#open-cart-btn {
+    display: none;
+    position: fixed;
+    bottom: 0; /* direkt an den unteren Rand kleben */
+    left: 0; /* Anfang links */
+    width: 100%; /* volle Breite */
+    padding: 16px 0; /* schöner Abstand innen */
+    font-size: 18px;
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    border-radius: 0; /* keine Rundungen, wenn du es komplett eckig haben willst */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    cursor: pointer;
+}
+#open-cart-btn:hover {
+    background-color: #ff8000b2;
+}
+
+@media (max-width: 780px) {
+    #open-cart-btn {
+        display: block;
+    }
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f36805;
+    cursor: pointer;
+    z-index: 3000;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.63);
+    }
+}

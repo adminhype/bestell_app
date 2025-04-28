@@ -36,9 +36,38 @@
             <div id="main-content">
                 <section id="hero-section"></section>
                 <div class="menu-title">
-                    <div class="hero-title">Subway</div>
+                    <div class="description-section">
+                        <div class="description-info">
+                            <span>
+                                <img src="./assets/img/icons/star.png" alt="" />
+                                <p>4,3(94)</p>
+                            </span>
+                            <span>
+                                <img
+                                    src="./assets/img/icons/buy-cart.png"
+                                    alt=""
+                                />
+                                <p>Min. 25,00€</p>
+                            </span>
+                            <span>
+                                <img src="./assets/img/icons/bike.svg" alt="" />
+                                <p>2,00€</p>
+                            </span>
+                        </div>
+                        <div class="description-button">
+                            <button>
+                                <img
+                                    src="./assets/img/icons/about-us.png"
+                                    alt=""
+                                />
+                                über uns
+                            </button>
+                        </div>
+                    </div>
+                    <a href="#dish-section" class="hero-title">Subway</a>
                     <p>Unsere Kreationen haben eine feste Belegformel.</p>
                 </div>
+
                 <section id="dish-section"></section>
                 <section id="impressum-container">
                     <div>
@@ -61,7 +90,23 @@
             </div>
 
             <aside id="cart-section"></aside>
-            <div id="order-success"></div>
+            <button id="open-cart-btn" onclick="openBasketOverlay()">
+                Warenkorb öffnen
+            </button>
+            <div id="cart-overlay" class="overlay d-none">
+                <button class="close-btn" onclick="closeBasketOverlay()">
+                    ×
+                </button>
+                <div class="overlay-content">
+                    <div id="overlay-cart-content"></div>
+                    <button onclick="closeOverlay()">Schließen</button>
+                </div>
+            </div>
+
+            <div
+                id="order-success-overlay"
+                class="order-success-overlay d-none"
+            ></div>
         </div>
 
         <footer>

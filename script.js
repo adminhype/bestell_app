@@ -67,14 +67,12 @@ function calculateSubtotal() {
     return subtotal;
 }
 function placeOrder() {
-    localStorage.setItem('cart', JSON.stringify(myDishes));
-    window.location.href = "checkout.html";
-
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
-        dish.amount = 0;
+        myDishes[i].amount = 0;
     }
     renderCart();
+    openOrderSuccessOverlay();
 }
 function updateCartAmount(id, action) {
     for (let i = 0; i < myDishes.length; i++) {
@@ -91,4 +89,33 @@ function updateCartAmount(id, action) {
             break;
         }
     }
+}
+// reponsiv warenkorb
+function renderOverlayCart() {
+    const overlayCart = document.getElementById('overlay-cart-content');
+    overlayCart.innerHTML = "";
+    const subtotal = calculateSubtotal();
+    let total = calculateTotal(subtotal);
+    for (let i = 0; i < myDishes.length; i++) {
+        const dish = myDishes[i];
+        if (dish.amount > 0) {
+            overlayCart.innerHTML += renderCartDishes(dish);
+        }
+    }
+}
+function openBasketOverlay() {
+    document.getElementById('cart-overlay').classList.remove('d-none');
+    renderOverlayCart();
+}
+function cloveBasketOverlay() {
+    document.getElementById('cart-overlay').classList.add('d-none');
+}
+
+function openOrderSuccessOverlay() {
+    const overlay = document.getElementById('order-success-overlay');
+    overlay.classList.remove('d-none');
+    overlay.innerHTML = renderOrderSuccessOverlay();
+}
+function closeOrderSuccessOverlay() {
+    document.getElementById('order-success-overlay').classList.add('d-none');
 }
