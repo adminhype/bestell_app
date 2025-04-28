@@ -1,34 +1,36 @@
 .page-content {
     display: flex;
     align-items: flex-start;
-    padding-top: 20px;
     background-color: #fcfcfc;
 }
 
 #main-content {
     flex: 2;
 }
-.dishCart {
+.dish-cart {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     border: 2px solid #b4b2b2;
     border-radius: 10px;
     margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.082);
     transition: all 0.3s ease;
+    padding: 20px;
+}
+.dish-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .dishImg {
     border-radius: 10px;
 }
-.dishCart:hover {
+.dish-cart:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     background-color: #f0f0f0;
 }
-.dishCard:hover {
-    background-color: rgba(0, 0, 0, 0.075);
-}
-
 .dishContainer {
     height: 100px;
     width: 120px;
@@ -41,7 +43,18 @@
         height: 100px;
         object-fit: cover;
     }
+    #addCartBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+    }
 }
-/* #dish-section {
-
-} */
+.menu-title {
+    margin: 20px;
+    .hero-title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+}

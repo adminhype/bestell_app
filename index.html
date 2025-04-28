@@ -21,38 +21,62 @@
     <body onload="init()">
         <header>
             <div class="header-container">
-                <div>
+                <a href="#">
                     <img
                         class="header-logo"
                         src="/assets/img/icons/Favicon/android-chrome-192x192.png"
                         alt=""
                     />
-                </div>
-                <div class="header-title">Lieferando</div>
+                </a>
+                <a href="#" class="header-title">Lieferando</a>
             </div>
         </header>
+
         <div class="page-content">
             <div id="main-content">
                 <section id="hero-section"></section>
+                <div class="menu-title">
+                    <div class="hero-title">Subway</div>
+                    <p>Unsere Kreationen haben eine feste Belegformel.</p>
+                </div>
                 <section id="dish-section"></section>
+                <section id="impressum-container">
+                    <div>
+                        <img src="./assets/img/icons/company-svg.svg" alt="" />
+                        Impressum Angaben gemäß § 5 TMG: <br />
+                        <br />
+                    </div>
+                    Fanatsie <br />Königstr. 1 <br />
+                    Australien <br />
+                    Vertreten durch: Max Musterman <br />
+                    Kontakt: fantasio<br />
+                    Telefon: 112 <br />
+                    E-Mail: fanatsy@fanatsy.de <br />
+                    <br />
+                    Umsatzsteuer-ID: Fantasie <br />
+                    Aufsichtsbehörde: Fantasie <br />
+                    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
+                    Fanatsie (Anschrift wie oben)
+                </section>
             </div>
 
             <aside id="cart-section"></aside>
             <div id="order-success"></div>
         </div>
-        <section id="impressum-section">
-            Impressum Angaben gemäß § 5 TMG: <br />
-            Fanatsie <br />Königstr. 1 <br />Australien <br />Vertreten durch:
-            Max Musterman <br />
-            Kontakt: fantasio<br />
-            Telefon: 112 <br />
-            E-Mail: fanatsy@fanatsy.de <br />
-            Umsatzsteuer-ID: Fantasie <br />
-            Aufsichtsbehörde: Fantasie <br />Verantwortlich für den Inhalt nach
-            § 55 Abs. 2 RStV: Fanatsie (Anschrift wie oben)
-        </section>
 
-        <footer></footer>
+        <footer>
+            <div class="footer-container">
+                <a href="">Jobs</a>
+                <a href="">AGB</a>
+                <a href="">Datenschutzerklärung</a>
+                <a href="">Impressum</a>
+                <a href="">Verwendung von Cookies</a>
+                <a href="">Barrierefreiheit</a>
+                <a href="">Bug Bounty</a>
+                <a href="">Ethik-Hotline</a>
+            </div>
+            <div class="copy-right">©fantasie bestell-app</div>
+        </footer>
         <script src="./scripts/db.js"></script>
         <script src="./scripts/templates.js"></script>
         <script src="script.js"></script>

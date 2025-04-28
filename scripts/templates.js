@@ -1,30 +1,50 @@
+function renderHeroSection() {
+    return `
+    <div class="image-container">
+        <div class="restaurant-header-img">
+        <img src="./assets/img/baguette-background.png" alt="" />
+        </div>
+        <div class="restaurant-header-icon">
+            <img src="./assets/img/baguette-logo.png">
+        </div>
+    </div>
+    `;
+}
+
 function dishTemplate(dish) {
     return `
-    
-    <div class="dishCart">
-        <div class="dishInfo">
-            <h3>Gerichtname${dish.name}</h3>
-            <p>Beschreibung${dish.description}</p>
-            <p>Preis${dish.price}</p>
+    <div class="dish-cart" onclick="addToCart('${dish.id}')">
+        <div class="dish-info">
+            <h3> ${dish.name}</h3>
+            <p>${dish.description}</p>
+            <p>ab ${dish.price.toFixed(2)}€</p>
             </div>
             <div class="dishContainer">
             <img class="dishImg"src="${dish.src}" />
-            <button onclick="addToCart('${dish.id}')">+</button>
+            <button id="addCartBtn" onclick="addToCart('${dish.id}')">
+            <img src="assets/img/icons/+icon.svg" alt="Warenkorb" class="icon">
+            </button>
             </div> 
-
     </div>`
 }
 function renderCartHeaderContent() {
     return `
         <h2 class="cartBasket">Warenkorb</h2>
-        <div class="switchContainer">
-            <button onclick="selectMode('delivery')">
-            <img>Lieferung</button>
-            <button onclick="selectMode('pickup')">Abholung</button>
+            <div class="switchContainer">
+            <button id="deliveryBtn" onclick="selectMode('delivery')">
+                <img src="assets/img/icons/bike.svg" alt="Lieferung Icon" class="icon">
+                Lieferung
+            </button>
+
+            <button id="pickupBtn" onclick="selectMode('pickup')">
+                <img src="assets/img/icons/pickup.svg" alt="Abholung Icon" class="icon">
+                Abholung
+            </button>
             </div>
         <div id="empty-cart" class="empty-cart">
-            <img src="./assets/img/icons/basket-icon.svg" alt="Basket Icon">
-            <p>Fülle deinen Warenkorb</p>
+            <img src="./assets/img/icons/buy-cart.png" alt="Basket Icon">
+            <h2>Fülle deinen Warenkorb</h2>
+            <p>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.
             </div>
     `;
 }

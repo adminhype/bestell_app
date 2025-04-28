@@ -9,9 +9,7 @@ function init() {
 }
 function createHeroSection() {
     const heroImg = document.getElementById('hero-section');
-    heroImg.innerHTML = `<div class="restaurant-header-img"><img src="./assets/img/baguette-background.png" alt="" /></div>
-    `;
-    return
+    heroImg.innerHTML = renderHeroSection();
 }
 function renderDishes() {
     const dishSection = document.getElementById('dish-section');
