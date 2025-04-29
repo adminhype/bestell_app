@@ -17,7 +17,7 @@ function renderDishes() {
     const dishSection = document.getElementById('dish-section');
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
-        dishSection.innerHTML += dishTemplate(dish);
+        dishSection.innerHTML += renderDishesTemplate(dish);
     }
 }
 
@@ -35,18 +35,15 @@ function renderCart() {
     basket.innerHTML = renderCartTitle();
     const subtotal = calculateSubtotal();
     let total = calculateTotal(subtotal);
-
     for (let i = 0; i < myDishes.length; i++) {
         const dish = myDishes[i];
         if (dish.amount > 0) {
             basket.innerHTML += renderCartDishes(dish);
         }
     }
-
     basket.innerHTML += renderCartTotal(subtotal, deliveryFee, serviceFee, total);
     basket.innerHTML += renderCheckoutButton();
 }
-
 
 function addToCart(id) {
     for (let i = 0; i < myDishes.length; i++) {

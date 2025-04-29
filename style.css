@@ -1,11 +1,24 @@
+header {
+    height: 84px;
+    display: flex;
+    justify-content: start;
+}
 .header-container {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     background-color: #ffffff;
-    height: 72px;
     box-shadow: 0px 2px 8px 0px rgba(24, 23, 23, 0);
     padding: 20px;
+}
+.german-icon {
+    display: flex;
+    justify-content: end;
+    img {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .header-logo {
@@ -97,6 +110,12 @@ body {
             gap: 5px;
             align-items: end;
         }
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
     }
 }
 #impressum-container {
@@ -130,6 +149,7 @@ a:hover {
 
 .copy-right {
     text-decoration: overline;
+    color: #242e30;
     display: flex;
     justify-content: center;
     padding-bottom: 20px;

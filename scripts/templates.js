@@ -11,7 +11,7 @@ function renderHeroSection() {
     `;
 }
 
-function dishTemplate(dish) {
+function renderDishesTemplate(dish) {
     return `
     <div class="dish-cart" onclick="addToCart('${dish.id}')">
         <div class="dish-info">
@@ -22,7 +22,7 @@ function dishTemplate(dish) {
             <div class="dishContainer">
             <img class="dishImg"src="${dish.src}" />
             <button id="addCartBtn" onclick="addToCart('${dish.id}')">
-            <img src="assets/img/icons/+icon.svg" alt="Warenkorb" class="icon">
+            <img src="./assets/img/icons/plus-icon.svg" alt="Warenkorb" class="icon">
             </button>
             </div> 
     </div>`
@@ -33,12 +33,12 @@ function renderCartHeaderContent() {
         <h2 class="cartBasket">Warenkorb</h2>
             <div class="switchContainer">
             <button id="deliveryBtn" onclick="selectMode('delivery')">
-                <img src="assets/img/icons/bike.svg" alt="Lieferung Icon" class="icon">
+                <img src="./assets/img/icons/bike.svg" alt="Lieferung Icon" class="icon">
                 Lieferung
             </button>
 
             <button id="pickupBtn" onclick="selectMode('pickup')">
-                <img src="assets/img/icons/pickup.svg" alt="Abholung Icon" class="icon">
+                <img src="./assets/img/icons/pickup.svg" alt="Abholung Icon" class="icon">
                 Abholung
             </button>
             </div>
@@ -65,10 +65,10 @@ function renderCartDishes(dish) {
 </p >       
     <p>Anzahl: ${dish.amount}</p>       
     <button onclick="updateCartAmount('${dish.id}', 'increase')">
-                <img src="./assets/img/icons/+Icon.svg" alt="erhöhen">
+                <img src="./assets/img/icons/plus-icon.svg" alt="erhöhen">
                 </button>
                 <button onclick="updateCartAmount('${dish.id}','decrease')">
-                    <img src="./assets/img/icons/-Icon.svg" alt="veringern">
+                    <img src="./assets/img/icons/minus-icon.svg" alt="veringern">
                 </button>
                 <button onclick="updateCartAmount('${dish.id}', 'remove')">
                     <img src="./assets/img/icons/delete-icon.svg" alt="löschen">

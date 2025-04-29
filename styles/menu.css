@@ -43,6 +43,8 @@
 .dishContainer {
     height: 100px;
     width: 120px;
+    display: flex;
+    justify-content: end;
 
     .dishImg {
         position: absolute;
