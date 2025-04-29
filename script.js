@@ -83,6 +83,7 @@ function placeOrder() {
         myDishes[i].amount = 0;
     }
     renderCart();
+    closeBasketOverlay();
     openOrderSuccessOverlay();
 }
 
@@ -98,6 +99,7 @@ function updateCartAmount(id, action) {
                 dish.amount = 0;
             }
             renderCart();
+            renderOverlayCart();
             break;
         }
     }
@@ -114,6 +116,8 @@ function renderOverlayCart() {
             overlayCart.innerHTML += renderCartDishes(dish);
         }
     }
+    overlayCart.innerHTML += renderCartTotal(subtotal, deliveryFee, serviceFee, total);
+    overlayCart.innerHTML += renderCheckoutButton();
 }
 
 function openBasketOverlay() {
@@ -121,7 +125,7 @@ function openBasketOverlay() {
     renderOverlayCart();
 }
 
-function cloveBasketOverlay() {
+function closeBasketOverlay() {
     document.getElementById('cart-overlay').classList.add('d-none');
 }
 
