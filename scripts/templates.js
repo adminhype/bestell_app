@@ -21,7 +21,7 @@ function renderDishesTemplate(dish) {
             </div>
             <div class="dishContainer">
             <img class="dishImg"src="${dish.src}" />
-            <button id="addCartBtn" onclick="addToCart('${dish.id}')">
+            <button id="addCartBtn">
             <img src="./assets/img/icons/plus-icon.svg" alt="Warenkorb" class="icon">
             </button>
             </div> 
@@ -49,6 +49,7 @@ function renderCartHeaderContent() {
             </div>
     `;
 }
+
 function renderCartTitle() {
     return `<h2 class="cartBasket">Warenkorb</h2>`;
 }
@@ -59,22 +60,38 @@ function renderCheckoutButton() {
 
 function renderCartDishes(dish) {
     return `
-    <div class="cartItem">
-    <p>Der Klassisch: ${dish.name}</p>       
-    <p>${(dish.price * dish.amount).toFixed(2)} €
-</p >       
-    <p>Anzahl: ${dish.amount}</p>       
-    <button onclick="updateCartAmount('${dish.id}', 'increase')">
-                <img src="./assets/img/icons/plus-icon.svg" alt="erhöhen">
-                </button>
-                <button onclick="updateCartAmount('${dish.id}','decrease')">
-                    <img src="./assets/img/icons/minus-icon.svg" alt="veringern">
-                </button>
-                <button onclick="updateCartAmount('${dish.id}', 'remove')">
-                    <img src="./assets/img/icons/delete-icon.svg" alt="löschen">
-                </button>
-        </div >
-    `
+    <div class="cartItem" id="cart-item-${dish.id}">
+        <p>${dish.name}</p>       
+        <p>${(dish.price * dish.amount).toFixed(2)} €</p>       
+        <p>Anzahl: ${dish.amount}</p>       
+        <button onclick="updateCartAmount('${dish.id}', 'increase')">
+            <img src="./assets/img/icons/plus-icon.svg" alt="erhöhen">
+        </button>
+        <button onclick="updateCartAmount('${dish.id}', 'decrease')">
+            <img src="./assets/img/icons/minus-icon.svg" alt="verringern">
+        </button>
+        <button onclick="updateCartAmount('${dish.id}', 'remove')">
+            <img src="./assets/img/icons/delete-icon.svg" alt="löschen">
+        </button>
+    </div>`;
+}
+
+function renderOverlayCartDishes(dish) {
+    return `
+    <div class="cartItem" id="overlay-cart-item-${dish.id}">
+        <p>${dish.name}</p>       
+        <p>${(dish.price * dish.amount).toFixed(2)} €</p>       
+        <p>Anzahl: ${dish.amount}</p>       
+        <button onclick="updateCartAmount('${dish.id}', 'increase')">
+            <img src="./assets/img/icons/plus-icon.svg" alt="erhöhen">
+        </button>
+        <button onclick="updateCartAmount('${dish.id}', 'decrease')">
+            <img src="./assets/img/icons/minus-icon.svg" alt="verringern">
+        </button>
+        <button onclick="updateCartAmount('${dish.id}', 'remove')">
+            <img src="./assets/img/icons/delete-icon.svg" alt="löschen">
+        </button>
+    </div>`;
 }
 
 function renderCartTotal(subtotal, deliveryFee, serviceFee, total) {
@@ -97,4 +114,3 @@ function renderOrderSuccessOverlay() {
     </div>
     `;
 }
-

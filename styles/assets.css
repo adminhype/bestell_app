@@ -35,10 +35,6 @@ button:hover {
     cursor: pointer;
 }
 
-#open-cart-btn:hover {
-    background-color: #ff8000b2;
-}
-
 @media (max-width: 780px) {
     #open-cart-btn {
         display: block;
