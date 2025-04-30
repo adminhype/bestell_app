@@ -22,6 +22,7 @@ function renderDefaultCart() {
     document.getElementById('cart-section').innerHTML = renderCartHeaderContent();
 }
 //#endregion initialsieren
+
 //#region rendern
 function renderCart() {
     const basket = document.getElementById('cart-section');
@@ -55,6 +56,7 @@ function renderOverlayCart() {
 `;
 }
 //#endregion rendern
+
 //#region update-logik
 function updateCartAmount(id, action) {
     for (let i = 0; i < myDishes.length; i++) {
@@ -69,7 +71,6 @@ function updateCartAmount(id, action) {
             }
             updateCartItemById(id);
             updateOverlayItemById(id);
-            break;
         }
     }
 }
@@ -78,16 +79,14 @@ function updateCartItemById(id) {
     const item = document.getElementById(`cart-item-${id}`);
     const basket = document.getElementById('cart-section');
     const summary = document.querySelector('.price-summary');
+
     if (dish.amount > 0) {
         const html = renderCartDishes(dish);
-        if (item) {
-            item.outerHTML = html;
-        } else if (summary) {
-            summary.insertAdjacentHTML('beforebegin', html);
-        } else {
-            basket.insertAdjacentHTML('beforeend', html);
-        }
-    } else if (item) { item.remove(); }
+        insertOrReplaceElement(item, html, summary, basket);
+    } else if (item) {
+        item.remove();
+    }
+
     updateCartSummary();
 }
 function updateOverlayItemById(id) {
@@ -98,13 +97,7 @@ function updateOverlayItemById(id) {
 
     if (dish.amount > 0) {
         const html = renderOverlayCartDishes(dish);
-        if (item) {
-            item.outerHTML = html;
-        } else if (summary) {
-            summary.insertAdjacentHTML('beforebegin', html);
-        } else {
-            overlay.insertAdjacentHTML('beforeend', html);
-        }
+        insertOrReplaceElement(item, html, summary, overlay);
     } else if (item) {
         item.remove();
     }
@@ -129,7 +122,17 @@ function updateOverlaySummary() {
     }
 }
 //#endregion update-logik
+
 //#region hilfs-funktionen
+function insertOrReplaceElement(existingItem, html, beforeElement, container) {
+    if (existingItem) {
+        existingItem.outerHTML = html;
+    } else if (beforeElement) {
+        beforeElement.insertAdjacentHTML('beforebegin', html);
+    } else {
+        container.insertAdjacentHTML('beforeend', html);
+    }
+}
 function calculateTotal(subtotal) {
     if (currentMode === 'delivery') {
         return subtotal + deliveryFee + serviceFee;
@@ -147,7 +150,8 @@ function calculateSubtotal() {
     }
     return subtotal;
 }
-//#endregion
+//#endregion hilfs-funktionen
+
 //#region interaktion
 function selectMode(mode) {
     currentMode = mode;

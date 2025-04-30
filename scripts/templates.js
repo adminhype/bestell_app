@@ -1,3 +1,4 @@
+// createHeroSection()
 function renderHeroSection() {
     return `
     <div class="image-container">
@@ -10,7 +11,7 @@ function renderHeroSection() {
     </div>
     `;
 }
-
+// renderDishes 
 function renderDishesTemplate(dish) {
     return `
     <div class="dish-cart" onclick="addToCart('${dish.id}')">
@@ -27,7 +28,7 @@ function renderDishesTemplate(dish) {
             </div> 
     </div>`
 }
-
+// renderDefaultCart 
 function renderCartHeaderContent() {
     return `
         <h2 class="cartBasket">Warenkorb</h2>
@@ -49,15 +50,15 @@ function renderCartHeaderContent() {
             </div>
     `;
 }
-
+// renderCart()
 function renderCartTitle() {
     return `<h2 class="cartBasket">Warenkorb</h2>`;
 }
-
+// renderCart(), updateCartItemById() 
 function renderCheckoutButton() {
     return `<button onclick="placeOrder()">Bezahlen</button>`;
 }
-
+// renderCart(), updateCartItemById() 
 function renderCartDishes(dish) {
     return `
     <div class="cartItem" id="cart-item-${dish.id}">
@@ -75,7 +76,7 @@ function renderCartDishes(dish) {
         </button>
     </div>`;
 }
-
+// renderOverlayCart(), updateOverlayItemById() 
 function renderOverlayCartDishes(dish) {
     return `
     <div class="cartItem" id="overlay-cart-item-${dish.id}">
@@ -93,7 +94,7 @@ function renderOverlayCartDishes(dish) {
         </button>
     </div>`;
 }
-
+// renderCartSummary(), renderOverlaySummary() 
 function renderCartTotal(subtotal, deliveryFee, serviceFee, total) {
     return `
     <div class="price-summary">
@@ -105,7 +106,7 @@ function renderCartTotal(subtotal, deliveryFee, serviceFee, total) {
     </div>
 `;
 }
-
+// openOrderSuccessOverlay() 
 function renderOrderSuccessOverlay() {
     return `
     <div class="order-success-overlay-content">
